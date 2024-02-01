@@ -1,0 +1,11 @@
+<div>
+    <h2>{{product.title}}</h2>
+    <h3>{{product.category}}</h3>
+    <p>{{product.price | currency}}</p>
+    <img [src]="product.image" alt="">
+    <button (click)="showDetails = !showDetails">Show details</button>
+<div *ngIf="showDetails">
+    <p>{{product.description}}</p>
+    <p>{{product.rating.rate}}</p>
+</div>
+</div>
